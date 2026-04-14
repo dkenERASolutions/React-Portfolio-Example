@@ -1,5 +1,6 @@
 import { Separator } from '@/components/ui/separator';
 import { Mail } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const GithubIcon = () => (
@@ -63,16 +64,14 @@ const Footer = () => {
         <div className='flex flex-wrap justify-between gap-10'>
           {/* Brand */}
           <div className='w-full max-w-xs'>
-            <Link
-              href='/'
-              className='group mb-4 flex w-fit items-center gap-2.5'
-            >
-              <div className='flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 shadow-sm'>
-                <span className='text-sm font-black text-white'>D</span>
-              </div>
-              <span className='text-lg font-bold tracking-tight text-white transition-colors group-hover:text-indigo-300'>
-                Danny
-              </span>
+            <Link href='/' className='group mb-4 flex w-fit items-center'>
+              <Image
+                src='/images/logo/danny-ken-chip.svg'
+                alt='Danny Ken logo'
+                width={64}
+                height={64}
+                className='h-16 w-16 transition-opacity group-hover:opacity-80'
+              />
             </Link>
 
             <p className='mb-6 text-sm leading-relaxed font-medium text-slate-500'>

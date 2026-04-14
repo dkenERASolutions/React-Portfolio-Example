@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -37,13 +38,15 @@ const Header = () => {
     >
       <div className='relative mx-auto flex max-w-[1170px] items-center justify-between px-4 sm:px-8 xl:px-0'>
         {/* Logo */}
-        <Link href='/' className='group flex items-center gap-2.5'>
-          <div className='flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 shadow-sm transition-shadow group-hover:shadow-indigo-500/30'>
-            <span className='text-sm font-black text-white'>D</span>
-          </div>
-          <span className='text-lg font-bold tracking-tight text-white transition-colors group-hover:text-indigo-300'>
-            Danny
-          </span>
+        <Link href='/' className='group flex items-center'>
+          <Image
+            src='/images/logo/danny-ken-chip.svg'
+            alt='Danny Ken logo'
+            width={64}
+            height={64}
+            className='h-16 w-16 transition-opacity group-hover:opacity-80'
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,0 +1,75 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="chipClip">
+      <rect x="130" y="130" width="240" height="240" rx="32"/>
+    </clipPath>
+    <linearGradient id="letterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#c8ffe8"/>
+      <stop offset="100%" stop-color="#7fffd4"/>
+    </linearGradient>
+    <filter id="bevel" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset dx="1.5" dy="2" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- PINS TOP -->
+  <rect x="172" y="98" width="22" height="34" rx="5" fill="#1a1a1a"/>
+  <rect x="239" y="98" width="22" height="34" rx="5" fill="#1a1a1a"/>
+  <rect x="306" y="98" width="22" height="34" rx="5" fill="#1a1a1a"/>
+
+  <!-- PINS BOTTOM -->
+  <rect x="172" y="368" width="22" height="34" rx="5" fill="#1a1a1a"/>
+  <rect x="239" y="368" width="22" height="34" rx="5" fill="#1a1a1a"/>
+  <rect x="306" y="368" width="22" height="34" rx="5" fill="#1a1a1a"/>
+
+  <!-- PINS LEFT -->
+  <rect x="98" y="172" width="34" height="22" rx="5" fill="#1a1a1a"/>
+  <rect x="98" y="239" width="34" height="22" rx="5" fill="#1a1a1a"/>
+  <rect x="98" y="306" width="34" height="22" rx="5" fill="#1a1a1a"/>
+
+  <!-- PINS RIGHT -->
+  <rect x="368" y="172" width="34" height="22" rx="5" fill="#1a1a1a"/>
+  <rect x="368" y="239" width="34" height="22" rx="5" fill="#1a1a1a"/>
+  <rect x="368" y="306" width="34" height="22" rx="5" fill="#1a1a1a"/>
+
+  <!-- CHIP BODY -->
+  <rect x="130" y="130" width="240" height="240" rx="32" fill="#1a1a1a"/>
+
+  <!-- subtle inner border -->
+  <rect x="140" y="140" width="220" height="220" rx="26" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Google Fonts import via foreignObject trick won't work in pure SVG,
+       so use a web-safe serif with style variation -->
+
+  <!-- Shadow layer for depth -->
+  <text
+    x="253" y="271"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Palatino, 'Palatino Linotype', 'Book Antiqua', serif"
+    font-size="108"
+    font-weight="bold"
+    font-style="italic"
+    fill="#003322"
+    clip-path="url(#chipClip)"
+    letter-spacing="4"
+  >DK</text>
+
+  <!-- Main gradient letter -->
+  <text
+    x="250" y="268"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Palatino, 'Palatino Linotype', 'Book Antiqua', serif"
+    font-size="108"
+    font-weight="bold"
+    font-style="italic"
+    fill="url(#letterGrad)"
+    clip-path="url(#chipClip)"
+    letter-spacing="4"
+  >DK</text>
+
+</svg>
