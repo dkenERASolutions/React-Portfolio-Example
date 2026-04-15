@@ -5,8 +5,6 @@ import Hero from '@/components/Home/Hero';
 import Reviews from '@/components/Home/Reviews';
 import Newsletter from '@/components/Newsletter';
 import { Metadata } from 'next';
-import { integrations } from '../../../integrations.config';
-import BlogSection from '@/components/Blog';
 
 export const metadata: Metadata = {
   title: 'Danny — Full Stack Developer & Technology Leader',
@@ -23,7 +21,6 @@ export default function Home() {
       <section className='relative z-20 overflow-hidden pt-20 pb-20 lg:pt-28'>
         <Reviews />
       </section>
-      {integrations.isSanityEnabled && <BlogSection />}
       <CallToAction />
       <Newsletter />
     </>
